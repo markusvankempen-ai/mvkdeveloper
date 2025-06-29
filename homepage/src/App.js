@@ -85,9 +85,9 @@ function App() {
             <div className="footer-section">
               <h3>Follow Us</h3>
               <div className="social-links">
-                <a href="#" aria-label="Twitter">Twitter</a>
-                <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                <a href="#" aria-label="GitHub">GitHub</a>
+                <a href="https://twitter.com" aria-label="Twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
+                <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
           </div>
