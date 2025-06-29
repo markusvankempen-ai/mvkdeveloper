@@ -87,7 +87,7 @@ function App() {
               <div className="social-links">
                 <a href="https://twitter.com" aria-label="Twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
                 <a href="https://www.linkedin.com/in/markusvankempen/?originalSubdomain=ca" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://github.com" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://github.com/markusvankempen-ai/mvkdeveloper" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
           </div>
