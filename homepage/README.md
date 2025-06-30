@@ -169,6 +169,49 @@ This project is licensed under the MIT License - see the repository for details.
 - **GitHub:** [https://github.com/markusvankempen-ai](https://github.com/markusvankempen-ai)
 - **Website:** [https://markusvankempen-ai.github.io/mvkdeveloper/](https://markusvankempen-ai.github.io/mvkdeveloper/)
 
+## 👨‍💻 Author
+
+**Markus van Kempen**
+- **Role:** Full-Stack Developer & Solution Architect
+- **Location:** Canada
+- **Expertise:** React, Node.js, Cloud Architecture, AI Integration
+- **LinkedIn:** [https://www.linkedin.com/in/markusvankempen/?originalSubdomain=ca](https://www.linkedin.com/in/markusvankempen/?originalSubdomain=ca)
+- **GitHub:** [https://github.com/markusvankempen-ai](https://github.com/markusvankempen-ai)
+- **Portfolio:** [https://markusvankempen-ai.github.io/mvkdeveloper/](https://markusvankempen-ai.github.io/mvkdeveloper/)
+
+## 📋 Change History
+
+### Version 2.0.0 - June 30, 2025
+- **🌙 Major UI Overhaul:** Implemented complete dark theme redesign
+- **🔗 Social Integration:** Added working LinkedIn and GitHub profile links
+- **📱 Enhanced Responsiveness:** Improved mobile-first responsive design
+- **⚡ Performance Optimization:** Optimized build process and asset delivery
+- **📝 Documentation Update:** Comprehensive README rewrite with detailed sections
+
+### Version 1.2.0 - June 29, 2025
+- **🚀 GitHub Pages Deployment:** Set up automated deployment pipeline
+- **🎨 Theme Implementation:** Initial dark theme development and testing
+- **🔧 Build Optimization:** Enhanced production build configuration
+- **📊 Analytics Integration:** Added performance monitoring capabilities
+
+### Version 1.1.0 - June 28, 2025
+- **🌐 Social Links:** Added placeholder social media links
+- **📐 Layout Improvements:** Enhanced component structure and styling
+- **🔄 Navigation Updates:** Improved header navigation and routing
+- **🎯 Content Updates:** Added professional copy and messaging
+
+### Version 1.0.0 - June 28, 2025
+- **🎉 Initial Release:** Created React homepage with Create React App
+- **📦 Core Components:** Implemented header, hero, features, and footer sections
+- **🎨 Basic Styling:** Added initial CSS styling and layout structure
+- **🔧 Development Setup:** Configured development environment and build tools
+
+### Upcoming Features
+- **🛡️ Admin Panel:** Planning content management system integration
+- **🌍 Internationalization:** Multi-language support development
+- **📊 Analytics Dashboard:** Advanced user interaction tracking
+- **🔌 API Integration:** Backend service connections for dynamic content
+
 ---
 
 **Last Updated:** June 30, 2025 | **Status:** ✅ Live & Deployed
