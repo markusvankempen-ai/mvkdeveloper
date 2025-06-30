@@ -1,0 +1,38 @@
+{
+  "name": "mvkdeveloper-portfolio",
+  "version": "2.0.0",
+  "description": "Modern React-based developer portfolio with dark theme design",
+  "private": true,
+  "scripts": {
+    "deploy": "./scripts/auto-deploy.sh",
+    "deploy:message": "./scripts/auto-deploy.sh",
+    "dev": "cd homepage && npm start",
+    "build": "cd homepage && npm run build",
+    "test": "cd homepage && npm test",
+    "homepage:install": "cd homepage && npm install",
+    "homepage:deploy": "cd homepage && npm run deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markusvankempen-ai/mvkdeveloper.git"
+  },
+  "keywords": [
+    "react",
+    "portfolio",
+    "dark-theme",
+    "github-pages",
+    "developer",
+    "website"
+  ],
+  "author": {
+    "name": "Markus van Kempen",
+    "email": "markus@vankempen.dev",
+    "url": "https://markusvankempen-ai.github.io/mvkdeveloper/"
+  },
+  "license": "MIT",
+  "homepage": "https://markusvankempen-ai.github.io/mvkdeveloper/",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+} 

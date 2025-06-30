@@ -1,0 +1,88 @@
+name: 🚀 Auto Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+    types: [ closed ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
+    
+    steps:
+    - name: 📥 Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: 🟢 Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: homepage/package-lock.json
+
+    - name: 📦 Install Dependencies
+      run: |
+        cd homepage
+        npm ci
+
+    - name: 🔍 Run Tests
+      run: |
+        cd homepage
+        npm test -- --coverage --watchAll=false
+
+    - name: 🏗️ Build React App
+      run: |
+        cd homepage
+        npm run build
+
+    - name: 📋 Setup Pages
+      uses: actions/configure-pages@v4
+
+    - name: 📤 Upload Build Artifacts
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: homepage/build
+
+    - name: 🚀 Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v4
+
+    - name: 📊 Deployment Summary
+      run: |
+        echo "🎉 Deployment completed successfully!"
+        echo "📅 Deployed at: $(date)"
+        echo "🌐 Live URL: https://markusvankempen-ai.github.io/mvkdeveloper/"
+        echo "📝 Commit: ${{ github.sha }}"
+        echo "👤 Author: ${{ github.actor }}"
+
+  notify-status:
+    runs-on: ubuntu-latest
+    needs: build-and-deploy
+    if: always()
+    
+    steps:
+    - name: 📢 Deployment Status
+      run: |
+        if [ "${{ needs.build-and-deploy.result }}" == "success" ]; then
+          echo "✅ AUTO-DEPLOYMENT SUCCESSFUL"
+          echo "🌐 Your site is live at: https://markusvankempen-ai.github.io/mvkdeveloper/"
+          echo "📊 All automated processes completed successfully"
+        else
+          echo "❌ AUTO-DEPLOYMENT FAILED"
+          echo "🔍 Please check the build logs for details"
+          echo "🛠️ Manual intervention may be required"
+        fi 
