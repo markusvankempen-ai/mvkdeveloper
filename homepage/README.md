@@ -206,6 +206,75 @@ This project is licensed under the MIT License - see the repository for details.
 - **🎨 Basic Styling:** Added initial CSS styling and layout structure
 - **🔧 Development Setup:** Configured development environment and build tools
 
+## 🤖 Automation & Deployment
+
+This project features comprehensive automation for development and deployment workflows:
+
+### 🚀 Auto-Deploy System
+**Quick Deployment:**
+```bash
+# From project root - commits, merges, and deploys automatically
+./scripts/auto-deploy.sh
+
+# With custom commit message
+./scripts/auto-deploy.sh "Add new feature"
+
+# Using npm scripts
+npm run deploy
+```
+
+**What happens automatically:**
+1. 📦 Adds all changes to git staging
+2. 💾 Commits with timestamp or custom message
+3. 🔄 Merges current branch to main
+4. ⬆️ Pushes to remote repository
+5. 🏗️ Builds React production bundle
+6. 🚀 Deploys to GitHub Pages
+7. ✅ Provides success confirmation
+
+### 🔄 GitHub Actions CI/CD
+**Triggers:** Push to main branch or merged PR
+**Process:**
+- 🧪 Runs test suite with coverage
+- 🏗️ Builds optimized production bundle
+- 📤 Deploys to GitHub Pages automatically
+- 📊 Reports deployment status
+
+### ⚡ Development Shortcuts
+**Setup aliases once:**
+```bash
+./scripts/setup-aliases.sh
+```
+
+**Then use convenient commands:**
+- `mvk-deploy` - Quick auto-deploy
+- `mvk-quick` - Deploy with timestamp
+- `mvk-dev` - Start development server
+- `mvk-build` - Build for production
+- `mvk-status` - Check git status
+- `mvk-goto` - Navigate to project
+
+### 📋 Manual Deployment (Alternative)
+```bash
+npm run build    # Build production bundle
+npm run deploy   # Deploy to gh-pages branch
+```
+
+### 🔧 Development Workflow
+```bash
+# Start development
+npm start
+
+# Make changes to components/styles
+# Test changes locally
+
+# Auto-deploy when ready
+./scripts/auto-deploy.sh "Describe your changes"
+
+# Or use the quick alias (if set up)
+mvk-deploy "Your commit message"
+```
+
 ### Upcoming Features
 - **🛡️ Admin Panel:** Planning content management system integration
 - **🌍 Internationalization:** Multi-language support development

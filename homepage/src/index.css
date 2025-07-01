@@ -1,13 +1,110 @@
+/* Global font and color palette - Dark Theme */
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+  /* A professional and consistent dark theme palette */
+  --color-bg: #121212; /* A deep, neutral dark background */
+  --color-surface: #1e1e1e; /* Kept for inputs, but cards will use the main bg */
+  --color-primary: #22c55e; /* A vibrant green for primary actions */
+  --color-primary-dark: #16a34a; /* Darker green for hover states */
+  --color-accent: #f3a444; /* A warm, inviting accent color */
+  --color-text-primary: #e5e7eb; /* Off-white for primary text */
+  --color-text-secondary: #9ca3af; /* Muted gray for secondary text */
+  --color-border: #374151; /* Subtle border color for dark theme */
+
+  --border-radius: 8px;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
 body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  color: var(--color-text-primary);
+  margin-top: 0;
+  font-weight: 600;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+/* Unified button styling */
+button, .button, input[type="submit"] {
+  font-family: var(--font-sans);
+  background-color: var(--color-primary);
+  color: #ffffff; /* Ensure high contrast on buttons */
+  border: 1px solid transparent;
+  border-radius: var(--border-radius);
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  display: inline-block;
+  text-align: center;
+}
+button:hover, .button:hover, input[type="submit"]:hover {
+  background-color: var(--color-primary-dark);
+  box-shadow: var(--shadow-md);
+  color: #ffffff; /* Ensure text color remains on hover */
+  text-decoration: none; /* Remove underline from button links */
+}
+
+/* Unified form input styling */
+input[type="text"], input[type="email"], input[type="password"], input[type="search"], textarea, select {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+  width: 100%;
+  box-sizing: border-box; /* Important for padding and width calculations */
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2); /* Adjusted focus ring for green */
+}
+
+label {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* A single, consistent class for all card/panel elements */
+.content-card {
+  background: transparent; /* Use transparent to show the main --color-bg */
+  border: none; /* No border needed */
+  border-radius: var(--border-radius);
+  box-shadow: none; /* Shadows are less prominent on dark themes */
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Remove old, duplicated class */
+.section-bg {
+  display: none;
 }

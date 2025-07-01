@@ -1,3 +1,71 @@
+/* 
+  Remove dark-mode theme and redundant styles.
+  The core styles are now inherited from index.css for consistency.
+*/
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.App-main {
+  flex-grow: 1;
+  padding: 2rem 1rem; /* Add some padding for smaller screens */
+}
+
+/*
+  A container to center content and provide a max-width.
+  This is a standard practice for clean layouts.
+*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Consistent horizontal padding */
+}
+
+/* Cleanup leftover styles that are no longer needed */
+.App-header,
+.App-header h1,
+.hero,
+.hero-content h1,
+.hero-content p,
+.cta-button,
+.features,
+.features h2,
+.features-grid,
+.feature-card,
+.feature-icon,
+.feature-card h3,
+.feature-card p,
+.services,
+.services h2,
+.services-grid,
+.service-item,
+.service-item h3,
+.service-item p,
+.footer,
+.footer-content,
+.footer-section h3,
+.footer-section p,
+.social-links,
+.social-links a,
+.footer-bottom,
+.footer-bottom p {
+  /* 
+    Resetting properties to inherit from the new global styles.
+    This is a safer way to clean up than deleting entire rule blocks,
+    as it prevents specificity issues from lingering styles.
+  */
+  background: inherit;
+  color: inherit;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
 /* Reset and base styles */
 * {
   margin: 0;
@@ -13,15 +81,20 @@ body {
   background-color: #0d1117;
 }
 
-.App {
-  min-height: 100vh;
-  background-color: #0d1117;
+.App-header {
+  background-color: #161b22;
+  padding: 20px;
+  color: white;
+  border-bottom: 1px solid #30363d;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+.App-header h1 {
+    font-size: 2.5rem;
+    color: #58a6ff;
+}
+
+.App-main.no-padding {
+  padding: 0;
 }
 
 /* Header */

@@ -113,6 +113,64 @@ For detailed documentation, setup instructions, and development guidelines, see 
 - **🌍 Global Deployment:** Successfully deployed to GitHub Pages with CDN
 - **📈 SEO Optimization:** Implemented best practices for search engine visibility
 
+## 🤖 Automation Features
+
+This project includes multiple levels of automation for seamless development and deployment:
+
+### 🚀 Auto-Deploy Script
+```bash
+# Quick deployment with auto-generated commit message
+./scripts/auto-deploy.sh
+
+# Deploy with custom commit message
+./scripts/auto-deploy.sh "Your custom commit message"
+
+# Using npm script
+npm run deploy "Your message"
+```
+
+**What it does:**
+- ✅ Commits all changes automatically
+- ✅ Merges to main branch
+- ✅ Syncs with remote repository
+- ✅ Builds and deploys to GitHub Pages
+- ✅ Provides colored status output
+
+### 🔄 GitHub Actions CI/CD
+Automatic deployment triggered on:
+- Push to main branch
+- Merged pull requests to main
+
+**Features:**
+- 🧪 Runs tests automatically
+- 🏗️ Builds production-ready app
+- 🚀 Deploys to GitHub Pages
+- 📊 Provides deployment status
+
+### ⚡ Shell Aliases (Optional)
+Set up convenient commands:
+```bash
+# Run setup once
+./scripts/setup-aliases.sh
+
+# Then use shortcuts
+mvk-deploy              # Quick auto-deploy
+mvk-quick               # Deploy with timestamp
+mvk-dev                 # Start development server
+mvk-status              # Check git status
+mvk-goto                # Navigate to project
+```
+
+### 📋 Available Scripts
+```bash
+npm run deploy          # Auto-deploy with script
+npm run dev             # Start development server
+npm run build           # Build for production
+npm run test            # Run tests
+npm run homepage:install # Install homepage dependencies
+npm run homepage:deploy  # Deploy homepage only
+```
+
 ### Upcoming Roadmap
 - **🛡️ Admin Panel Integration:** Content management system development
 - **🌍 Internationalization:** Multi-language support implementation  

@@ -1,0 +1,22 @@
+/* Shop.css - Professional shop page styling */
+
+.shop-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.shop-title {
+  color: var(--color-text-primary);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 1rem;
+}
+
+/* Ensure ProductGrid has proper spacing */
+.product-grid {
+  margin-top: 1rem;
+} 

@@ -1,102 +1,65 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
+import { CartProvider } from './context/CartContext';
+import { AuthProvider } from './context/AuthContext';
+import Header from './components/Header';
+import CartPanel from './components/CartPanel';
+import AdminSettings from './components/AdminSettings';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import Shop from './components/Shop';
+import About from './components/About';
+import Contact from './components/Contact';
+import Admin from './components/Admin';
+import AdminProducts from './components/AdminProducts';
+import Login from './components/Login';
+import Checkout from './components/Checkout';
+import ProtectedRoute from './components/ProtectedRoute';
+import ProductDetail from './components/ProductDetail';
+import Register from './components/Register';
+import Profile from './components/Profile';
+
+const AppContent = () => {
+  const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const toggleCart = () => {
+    setIsCartOpen(!isCartOpen);
+  };
+
+  // Header is always shown now
+  return (
+    <div className="App">
+      <Header onCartClick={toggleCart} />
+      <main className="App-main">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
+          <Route path="/admin/settings" element={<ProtectedRoute><AdminSettings /></ProtectedRoute>} />
+          <Route path="/admin/products" element={<ProtectedRoute><AdminProducts /></ProtectedRoute>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+        </Routes>
+      </main>
+      <CartPanel isOpen={isCartOpen} onClose={toggleCart} />
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      {/* Header */}
-      <header className="header">
-        <div className="nav-container">
-          <div className="logo">
-            <h2>MyWebsite</h2>
-          </div>
-          <nav className="nav">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#contact">Contact</a>
-          </nav>
-        </div>
-      </header>
-
-      {/* Hero Section */}
-      <section className="hero" id="home">
-        <div className="hero-content">
-          <h1>Welcome to Our Amazing Website</h1>
-          <p>Discover the power of modern web development with React</p>
-          <button className="cta-button">Get Started</button>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="features" id="about">
-        <div className="container">
-          <h2>Why Choose Us?</h2>
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-icon">⚡</div>
-              <h3>Fast & Reliable</h3>
-              <p>Built with modern technologies for optimal performance</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">🎨</div>
-              <h3>Beautiful Design</h3>
-              <p>Clean, modern interface that users love</p>
-            </div>
-            <div className="feature-card">
-              <div className="feature-icon">📱</div>
-              <h3>Mobile Friendly</h3>
-              <p>Responsive design that works on all devices</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Services Section */}
-      <section className="services" id="services">
-        <div className="container">
-          <h2>Our Services</h2>
-          <div className="services-grid">
-            <div className="service-item">
-              <h3>Web Development</h3>
-              <p>Custom websites tailored to your needs</p>
-            </div>
-            <div className="service-item">
-              <h3>Mobile Apps</h3>
-              <p>Native and cross-platform mobile solutions</p>
-            </div>
-            <div className="service-item">
-              <h3>Consulting</h3>
-              <p>Expert advice for your digital strategy</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="footer" id="contact">
-        <div className="container">
-          <div className="footer-content">
-            <div className="footer-section">
-              <h3>Contact Us</h3>
-              <p>Email: hello@mywebsite.com</p>
-              <p>Phone: (555) 123-4567</p>
-            </div>
-            <div className="footer-section">
-              <h3>Follow Us</h3>
-              <div className="social-links">
-                <a href="https://twitter.com" aria-label="Twitter" target="_blank" rel="noopener noreferrer">Twitter</a>
-                <a href="https://www.linkedin.com/in/markusvankempen/?originalSubdomain=ca" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="https://github.com/markusvankempen-ai/mvkdeveloper" aria-label="GitHub" target="_blank" rel="noopener noreferrer">GitHub</a>
-              </div>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <p>&copy; 2024 MyWebsite. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
-    </div>
+    <AuthProvider>
+      <CartProvider>
+        <Router basename="/mvkdeveloper">
+          <AppContent />
+        </Router>
+      </CartProvider>
+    </AuthProvider>
   );
 }
 

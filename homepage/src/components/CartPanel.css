@@ -1,0 +1,73 @@
+.cart-panel {
+  position: fixed;
+  top: 0;
+  right: -450px; /* Start off-screen */
+  width: 450px;
+  max-width: 90vw;
+  height: 100%;
+  background-color: #0d1117;
+  box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease-in-out;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-panel.open {
+  right: 0;
+}
+
+.cart-panel-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s;
+  z-index: 1000;
+}
+
+.cart-panel-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cart-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #30363d;
+}
+
+.cart-panel-header h2 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #f0f6fc;
+}
+
+.close-panel-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Make contained shopping cart have a transparent background and no margin/border */
+.cart-panel .shopping-cart {
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0 1.5rem; /* Add padding to content inside */
+}
+
+.cart-panel .shopping-cart h2 {
+    display: none; /* Hide ShoppingCart's own title */
+} 

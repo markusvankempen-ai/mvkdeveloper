@@ -1,0 +1,57 @@
+/* 
+  Home.css - Refactored for consistency with the dark theme.
+  The .content-card class from index.css now handles the background and padding.
+*/
+
+.home-container {
+  /* This class is now only used for centering via the .container utility class */
+  max-width: 1200px;
+}
+
+.home-content-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to single column for mobile */
+  align-items: center;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .home-content-grid {
+    grid-template-columns: 2fr 1fr; /* Two columns for larger screens */
+  }
+}
+
+.welcome-text {
+  flex: 1; /* This can be removed if grid is used */
+}
+
+.welcome-text h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--color-text-primary); /* Use theme color */
+  margin-bottom: 1rem;
+}
+
+.welcome-text .subtitle {
+  font-style: italic;
+  color: var(--color-text-secondary); /* Use theme color */
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.welcome-text p {
+  line-height: 1.7;
+  color: var(--color-text-secondary); /* Use theme color */
+}
+
+.welcome-image {
+  text-align: center; /* Center image on mobile */
+}
+
+.welcome-image img {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md); /* Use theme shadow */
+}
+
+ 

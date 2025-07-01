@@ -1,0 +1,87 @@
+[
+  {
+    "id": "book-stubbert2nd",
+    "type": "Book",
+    "name": "Brenda Stubbert The 2nd Collection",
+    "author": "Brenda Stubbert",
+    "price": 1950,
+    "image": "/images/stubbert2nd.jpg",
+    "description": "161 tunes, a mix of traditional and original material from Cape Breton, Irish, and Scottish traditions.",
+    "inventory": 20,
+    "featured": true
+  },
+  {
+    "id": "book-holland2nd",
+    "type": "Book",
+    "name": "Jerry Holland The 2nd Collection",
+    "author": "Jerry Holland",
+    "price": 2450,
+    "image": "/images/2nd_Collection_Cover.jpg",
+    "description": "322 tunes, including 120 new Holland compositions, with chords and tunes from several albums.",
+    "inventory": 20,
+    "featured": true
+  },
+  {
+    "id": "book-lighthouse",
+    "type": "Book",
+    "name": "The Lighthouse Collection",
+    "author": "Paul Cranford",
+    "price": 1950,
+    "image": "/images/Lighthouse_cover.jpeg",
+    "description": "294 tunes, mostly new to Cape Breton, Irish, and Scottish traditions, with chords.",
+    "inventory": 20,
+    "featured": false
+  },
+  {
+    "id": "cd-jerryfriends",
+    "type": "CD",
+    "name": "Jerry Holland and Friends",
+    "artist": "Jerry Holland",
+    "price": 1950,
+    "image": "/images/JerryFriends.jpg",
+    "description": "57 tunes on 21 tracks, including many never recorded before, with various guest artists.",
+    "inventory": 20,
+    "featured": false
+  },
+  {
+    "id": "bundle-heritage9",
+    "type": "Bundle",
+    "name": "The CB Musical Heritage Series - 9 Book Bundle",
+    "price": 11250,
+    "image": "/images/collage9.jpg",
+    "description": "The Heritage Series currently contains 9 books. Includes: The Cape Breton Highland Collection, Cape Breton Scottish Collection, The Cape Breton Fiddlers Collection, Brenda Stubbert: The Second Collection, Jerry Holland: The Second Collection, Winston Fitzgerald: A Collection of Fiddle Tunes, The Lighthouse Collection, Brenda Stubbert Collection, Jerry Holland's Collection of Fiddle Tunes. Substitutions available.",
+    "inventory": 10,
+    "featured": false
+  },
+  {
+    "id": "bundle-lighthouse-cd",
+    "type": "Bundle",
+    "name": "The Lighthouse Collection book & More Tunes CDs",
+    "price": 3300,
+    "image": "/images/lighthouse-bundle.jpg",
+    "description": "294 melodies with chords by Paul Cranford, plus 'More Tunes from the Lighthouse' (2 CDs, 34 medleys, 24-page booklet). New edition includes worldwide session favorites.",
+    "inventory": 15,
+    "featured": false
+  },
+  {
+    "id": "bundle-winstonfitzgerald",
+    "type": "Bundle",
+    "name": "Winston Fitzgerald Collection & Classic Cuts CD",
+    "price": 3495,
+    "image": "/images/winston-fitzgerald-bundle.jpg",
+    "description": "Winston has set the standard for Cape Breton fiddling. Classic Cuts gives a sampling of his music recorded during the 1950s & 60s. Specially priced book-CD bundle.",
+    "inventory": 12,
+    "featured": false
+  },
+  {
+    "id": "cd-fitzgerald-classiccuts",
+    "type": "CD",
+    "name": "Winston Fitzgerald: Classic Cuts",
+    "artist": "Winston Fitzgerald",
+    "price": 1950,
+    "image": "/images/ClassicCuts.jpeg",
+    "description": "22 digitally remastered classic cuts from the Celtic LPs, featuring some of the most influential Cape Breton fiddle music.",
+    "inventory": 20,
+    "featured": false
+  }
+]

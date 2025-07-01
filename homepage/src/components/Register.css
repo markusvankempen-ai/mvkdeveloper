@@ -1,0 +1,19 @@
+/* Add specific styles for Register component if needed */
+.input-group-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.input-group-checkbox label {
+  margin-bottom: 0; /* Override default label margin if any */
+  font-weight: normal;
+  color: #555;
+}
+
+.input-group-checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+} 

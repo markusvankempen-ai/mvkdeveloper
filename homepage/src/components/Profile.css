@@ -1,0 +1,98 @@
+.profile-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: #333;
+}
+
+.profile-container h2 {
+  color: #20232a;
+  margin-bottom: 0.5rem;
+}
+
+.profile-container p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #444;
+}
+
+.form-group input[type="text"] {
+  padding: 0.8rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input[type="text"]:focus {
+  border-color: #61dafb;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(97, 218, 251, 0.3);
+}
+
+.form-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-group-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.form-group-checkbox input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.form-group-checkbox label {
+  margin: 0;
+  font-weight: normal;
+}
+
+.save-button {
+  padding: 0.8rem 1.5rem;
+  background-color: #61dafb;
+  color: #20232a;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  align-self: flex-start;
+}
+
+.save-button:hover {
+  background-color: #3aa8c8;
+}
+
+.success-message {
+  margin-top: 1rem;
+  color: #28a745;
+  font-weight: bold;
+} 
