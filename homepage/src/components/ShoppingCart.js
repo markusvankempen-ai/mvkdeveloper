@@ -1,13 +1,11 @@
 import React from 'react';
 import { useCart } from '../hooks/useCart';
-import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import CartItem from './CartItem';
 import './ShoppingCart.css';
 
 const ShoppingCart = () => {
   const { items, clearCart } = useCart();
-  const { currentUser } = useAuth();
   const navigate = useNavigate();
 
   const cartTotal = items.reduce(
